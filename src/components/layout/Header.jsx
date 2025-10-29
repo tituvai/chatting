@@ -18,10 +18,10 @@ const Header = () => {
                     <ul className='flex items-center gap-x-15'>
                         {[
                             {name:'Home', path:'/'},
-                            {name:'Login', path:'/'},
-                            {name:'Sign Up', path:'/'},
+                            {name:'Login', path:'/login'},
+                            {name:'Sign Up', path:'/singup'},
                         ].map((item, index)=>(
-                            <li key={index}><Link className='text-base text-black font-semibold hover:text-primary'>{item.name}</Link></li>
+                            <li key={index}><Link to={item.path} className='text-base text-black font-semibold hover:text-primary'>{item.name}</Link></li>
                         ))}
                     </ul>
                 </div>
