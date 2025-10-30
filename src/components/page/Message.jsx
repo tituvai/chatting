@@ -1,14 +1,7 @@
 import React from 'react'
-
 import Container from '../Container'
 import Flex from '../Flex'
 import Image from '../Image'
-import profile from '/src/assets/profile.png'
-import { SlHome } from "react-icons/sl";
-import { BsChatDots } from "react-icons/bs";
-import { IoMdNotificationsOutline } from "react-icons/io";
-import { IoSettingsOutline } from "react-icons/io5";
-import Logout from '../../assets/icon/Logout'
 import { IoIosSearch } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import Heading from '../Heading'
@@ -45,24 +38,6 @@ const Message = () => {
     <>
     <div className="bg-[#FCFCFC]">
         <Container>
-            <div className="w-[220px] relative">
-                <div className="w-[200px] bg-primary py-10 rounded-xl absolute top-5 -left-10">
-            <div className="flex justify-center">
-                <Image className={'w-[100px]'} imgSrc={profile}/>
-            </div>
-            <Flex className={'items-end flex-col'}>
-                <div className="flex justify-end flex-col">                  
-                    <div className="w-[160px] px-10 py-4 hover:bg-white rounded-l-2xl border-r-6 border-primary group my-5"><SlHome className='text-white size-10 group-hover:text-primary'/></div>
-                    <div className="w-[160px] px-10 py-4 hover:bg-white rounded-l-2xl border-r-6 border-primary group my-5"><BsChatDots className='text-white size-10 group-hover:text-primary'/></div>
-                    <div className="w-[160px] px-10 py-4 hover:bg-white rounded-l-2xl border-r-6 border-primary group my-5"><IoMdNotificationsOutline className='text-white size-10 group-hover:text-primary'/></div>
-                    <div className="w-[160px] px-10 py-4 hover:bg-white rounded-l-2xl border-r-6 border-primary group my-5"><IoSettingsOutline className='text-white size-10 group-hover:text-primary'/></div>
-                </div>
-                <div className="pt-40">
-                    <div className="w-[160px] px-10 py-4 hover:bg-white rounded-l-2xl border-r-6 border-primary group my-5"><Logout className='text-white size-10 group-hover:text-primary'/></div>
-                </div>
-            </Flex>
-            </div>
-            </div>
 
             <div className="pl-[200px] py-5 ">
                 <div className='flex justify-between flex-wrap gap-y-10'>

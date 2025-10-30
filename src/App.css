@@ -3,11 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --color-primary: #5F35F5;
-  --color-secndory: #4D4D4D;
---shadow-boxShadow: 0 10px 5px rgba(0, 0, 0, 0.20); 
-}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -123,4 +119,10 @@
   body {
     @apply bg-background text-foreground; 
   } 
+}
+
+@theme {
+  --color-primary: #5F35F5;
+  --color-secndory: #4D4D4D;
+--shadow-boxShadow: 0 10px 5px rgba(0, 0, 0, 0.20); 
 }
