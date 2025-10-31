@@ -6,11 +6,14 @@ import Label from '../Label'
 import Button from '../Button'
 import { getAuth, createUserWithEmailAndPassword, updateProfile} from "firebase/auth";
 import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom'
 
 
 
 
 const Signup = () => {
+
+  const navigation = useNavigate()
   const auth = getAuth();
   const [userInfo, setUserInfo] = useState({
     name:"",
@@ -56,6 +59,7 @@ const Signup = () => {
     }else{
       
 createUserWithEmailAndPassword(auth, userInfo.email, userInfo.password)
+      navigation('/login')
   .then((userCredential) => {
     const user = auth.currentUser;
     updateProfile(auth.currentUser, {
