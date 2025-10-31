@@ -9,9 +9,22 @@ import { FcGoogle } from "react-icons/fc";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast';
+import { useDispatch, useSelector } from 'react-redux'
+import { userLoginInfo } from '@/features/userSlice'
 
 
 const Login = () => {
+
+  // Redux Part 
+
+  const data=useSelector((state)=>state.userInfofmatiom.value)
+  const dispatch = useDispatch()
+const handleDashboard = ()=>{
+  // console.log('Clicked')
+  dispatch(userLoginInfo(userInfo))
+}
+
+  // Redux Part End
 const auth = getAuth();
 const navigation = useNavigate()
  const [userInfo, setUserInfo] = useState({
